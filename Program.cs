@@ -8,7 +8,68 @@ LearningActivity35();
 void LearningActivity31()
 {
     Console.WriteLine("This is the function for Learning Activity 3.1!");
+
+    // Function to convert temperature
+
+     static double TemperatureConverter(double inputTemperature,string targetScale)
+
+    {
+
+        double convertedTemperature = 0;
+
+        switch (targetScale.ToLower())
+
+        {
+
+            case "f":
+
+                // Celsius to Fahrenheit
+
+                convertedTemperature = (inputTemperature * 9 / 5) +
+
+                32;
+
+                break;
+
+            case "c":
+
+                // Fahrenheit to Celsius
+
+                convertedTemperature = (inputTemperature - 32) * 5 /
+
+                9;
+
+                break;
+
+        }
+
+        return convertedTemperature;
+
+    }
+
+     static void Main(string[] args)
+
+    {
+
+        Console.WriteLine("Enter the temperature to convert:");
+
+        double userTemperature = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Convert To Fahrenheit (f) or Celsius (C)?");
+
+        string conversionScale = Console.ReadLine();
+
+        double resultTemperature =
+
+        TemperatureConverter(userTemperature, conversionScale);
+
+        Console.WriteLine("Converted Temperature: " +
+
+        resultTemperature);
+    }
 }
+
+
 void LearningActivity32()
 {
     Console.WriteLine("This is the function for Learning Activity 3.2!");
